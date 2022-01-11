@@ -15,7 +15,12 @@ const PostPage = ({ posts, handleDelete }) => {
             <Link to={`/edit/${post.id}`}>
               <button className='editButton'>Edit Post</button>
             </Link>
-            <button onClick={() => handleDelete(post.id)}>Delete Post</button>
+            <button
+              className='deleteButton'
+              onClick={() => handleDelete(post.id)}
+            >
+              Delete Post
+            </button>
           </>
         )}
         {!post && (
